@@ -1,0 +1,12 @@
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+#container{
+    flex-direction: row;
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-wrap:wrap;
+}
