@@ -7,12 +7,46 @@
         <link rel="stylesheet" href="etch-a-sketch.css"/>
     </head>
     <body>
+        <button id="dimensions">Change Dimensions</button>
         <div id="container">
 
         </div>
     <script>
+        
+        const btn = document.querySelector('#dimensions');
+        const container = document.querySelector('#container')
+        let userInput;
 
-       const container = document.querySelector('#container')
+        btn.addEventListener('click', () => {
+        
+        userInput = parseInt(prompt("Please enter a number"))
+        
+        if (userInput <= 100){
+
+        
+        container.innerHTML = " "
+
+        const containerSize = 500;
+        const numRows = userInput;
+        const squarePx = containerSize / numRows
+            
+        for(let a = 1; a <= userInput; a++){
+          const row = document.createElement('div')
+          row.classList.add('row')
+          container.appendChild(row)
+        
+        for(let j = 1; j <= userInput; j++){
+            const div = document.createElement('div');
+            div.classList.add('square')
+            div.style.width = `${squarePx}px`;
+            div.style.height = `${squarePx}px`
+            row.appendChild(div)
+        }
+        
+        }
+        }
+        })
+        
         for(let a = 1; a <= 16; a++){
           const row = document.createElement('div')
           row.classList.add('row')
