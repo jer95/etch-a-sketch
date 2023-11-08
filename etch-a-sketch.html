@@ -10,6 +10,7 @@
         <div class="header-controls">
             <h1 class="main-header">Etch-A-Sketch</h1>
             <button id="dimensions">Change Dimensions</button>
+            <button id="reset">Reset</button>
         </div>
         <div id="container">
 
@@ -74,6 +75,14 @@
         squares.forEach((square => square.addEventListener('mouseover',() => {
             event.target.style.backgroundColor = 'rgb(71, 67, 64)';
         })))
+
+        const reset = document.querySelector('#reset');
+
+        reset.addEventListener('click',() => {
+            squares.forEach((square) => {
+                square.style.backgroundColor = 'white';
+            })
+        })
        
     </script>
     </body>
