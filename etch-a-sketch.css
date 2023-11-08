@@ -1,4 +1,5 @@
 body{
+    background-color: rgba(198, 32, 134, 0.537);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -7,6 +8,10 @@ body{
 #container{
     flex-direction: column;
     display: flex;
+    background-color: whitesmoke;
+    padding: 2px;
+    border: 2px #9b29d040 solid;
+    border-radius: 10px;
 }
 
 .row{
@@ -14,8 +19,8 @@ body{
     }
 
 .square {
-    background-color: peachpuff;
-    border: 1px brown solid;
+    background-color: white;
+    border: 1px beige solid;
     width: 37px;
     height: 37px;
 }
@@ -25,4 +30,21 @@ body{
     flex-direction: column;
     gap: 25px;
     margin-right: 50px;
+}
+
+.main-header{
+    font-size: 48px;
+    font-family: FANGSONG;
+    color: white;
+}
+
+button{
+    width: fit-content;
+    border: 0;
+    line-height: 2.5;
+    padding: 0 10px;
+    border-radius: 10px;
+    background-color: rgba(241, 235, 239, 0.537);
+    color: #0d0605;
+    font-size: 18px;
 }
