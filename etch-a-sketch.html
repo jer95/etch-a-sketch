@@ -7,7 +7,10 @@
         <link rel="stylesheet" href="etch-a-sketch.css"/>
     </head>
     <body>
-        <button id="dimensions">Change Dimensions</button>
+        <div class="header-controls">
+            <h1 class="main-header">Etch-A-Sketch</h1>
+            <button id="dimensions">Change Dimensions</button>
+        </div>
         <div id="container">
 
         </div>
@@ -44,6 +47,12 @@
         }
         
         }
+
+        const squares = document.querySelectorAll('.square');
+        
+        squares.forEach((square => square.addEventListener('mouseover',() => {
+            event.target.style.backgroundColor = 'rgb(71, 67, 64)';
+        })))
         }
         })
         
@@ -59,6 +68,12 @@
             row.appendChild(div)
         }
         }
+
+        const squares = document.querySelectorAll('.square');
+        
+        squares.forEach((square => square.addEventListener('mouseover',() => {
+            event.target.style.backgroundColor = 'rgb(71, 67, 64)';
+        })))
        
     </script>
     </body>
