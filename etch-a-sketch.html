@@ -54,6 +54,14 @@
         squares.forEach((square => square.addEventListener('mouseover',() => {
             event.target.style.backgroundColor = 'rgb(71, 67, 64)';
         })))
+
+        const reset = document.querySelector('#reset');
+
+        reset.addEventListener('click',() => {
+            squares.forEach((square) => {
+                square.style.backgroundColor = 'white';
+            })
+        })
         }
         })
         
